@@ -73,6 +73,9 @@ class SvgTo3d(bpy.types.Operator):
         bpy.ops.mesh.dissolve_faces()
 
         bpy.ops.mesh.dissolve_limited()
+        
+        bpy.ops.mesh.select_mode(use_extend=False, use_expand=False, type='VERT')
+        bpy.ops.mesh.remove_doubles()
 
         return {'FINISHED'}
 
